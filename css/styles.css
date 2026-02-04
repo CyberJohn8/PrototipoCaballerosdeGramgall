@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    background: #111;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* BASE STICKMAN */
+.stickman {
+    position: absolute;
+    bottom: 5px;
+    width: 40px;
+    height: 140px;
+}
+
+.head {
+    width: 26px;
+    height: 26px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.torso {
+    width: 6px;
+    height: 45px;
+    margin: 0 auto;
+}
+
+.arm, .leg {
+    position: absolute;
+    transform-origin: top center;
+}
+
+.arm {
+    top: 50px;
+    width: 6px;
+    height: 30px;
+}
+
+.forearm {
+    position: absolute;
+    top: 30px;
+    width: 6px;
+    height: 25px;
+}
+
+.leg {
+    top: 90px;
+    width: 6px;
+    height: 35px;
+}
+
+.calf {
+    position: absolute;
+    top: 35px;
+    width: 6px;
+    height: 30px;
+}
+
+.left { left: 8px; }
+.right { left: 26px; }
+
+/* INFO */
+.info {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+/*
+ANIMACION DE CAIDAS
+*/
+.hit {
+    animation: hit 0.15s;
+}
+
+@keyframes hit {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
+
+.fall {
+    animation: fallDown 0.8s forwards ease-in;
+}
+
+@keyframes fallDown {
+    0% {
+        transform: rotate(0deg);
+        bottom: 5px;
+    }
+    100% {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+}
